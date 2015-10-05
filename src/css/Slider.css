@@ -1,0 +1,58 @@
+.Slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.Slider>ul {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    transition: left 1s;
+}
+.Slider .SliderItem {
+    display: inline-block;
+    height: auto;
+}
+.Slider .SliderItem>img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.Slider .SliderArrows {
+    display: inline-block;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    z-index: 100;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.Slider .SliderArrows:hover {
+    background: rgba(0,0,0,.2);
+}
+.Slider .DotsWrap {
+    z-index: 99;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.Slider .DotsWrap>span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 3px solid #ccc;
+    margin: 6px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.Slider .DotsWrap>span:hover {
+    border: 3px solid #868686;
+}
+.Slider .DotsWrap>span.dotSlect {
+    background: #ccc;
+}

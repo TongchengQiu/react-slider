@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider-demo</title>
+    <script src="dist/js/build/react/react.js"></script>
+    <script src="dist/js/build/react/JSXTransformer.js"></script>
+    <script src="dist/js/Slider.min.js"></script>
+    <link rel="stylesheet" href="dist/css/Slider.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #slider {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="slider"></div>
+</body>
+<script type="text/jsx">
+    React.render(
+        <Slider
+            src={[
+                "dist/images/demo1.jpg",
+                "dist/images/demo2.jpg",
+                "dist/images/demo3.jpg",
+                "dist/images/demo4.jpg"
+            ]}
+            speed={1.5}
+            delay={3}
+            pause={true}
+            autoplay={true}
+            dots={true}
+            arrows={true}
+        /> ,
+        document.getElementById("slider")
+    );
+</script>
+</html>
