@@ -1,29 +1,32 @@
 {
-  "name": "slider-react",
+  "name": "react-slider",
   "version": "1.0.0",
   "description": "react plug-in",
   "main": "index.js",
-  "dependencies": {
-    "gulp": "^3.9.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-clean": "^0.3.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-jshint": "^1.11.2",
-    "gulp-livereload": "^3.8.1",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-react": "^3.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-ruby-sass": "^2.0.4",
-    "gulp-uglify": "^1.4.1",
-    "gulp-util": "^3.0.6",
-    "tiny-lr": "^0.2.0"
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "express": "^4.13.4",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "react": "^0.14.7",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "dist": "npm run clean && NODE_ENV=production webpack --progress --colors",
+    "server": "node devServer.js",
+    "build": "npm run clean && NODE_ENV=development webpack --config webpack.config.js  --progress --colors --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TongchengQiu/react-slider.git"
   },
   "author": "qiutc",
   "license": "ISC"
