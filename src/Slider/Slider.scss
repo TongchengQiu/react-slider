@@ -1,25 +1,32 @@
-.Slider {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
+* {
+  margin: 0;
+  padding: 0;
 }
-.Slider>ul {
+.slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+  &>ul {
     height: auto;
     overflow: hidden;
     position: relative;
     left: 0;
     transition: left 1s;
-}
-.Slider .SliderItem {
+  }
+
+  .slider-item {
     display: inline-block;
     height: auto;
-}
-.Slider .SliderItem>img {
-    display: block;
-    height: auto;
-    width: 100%;
-}
-.Slider .SliderArrows {
+
+    &>img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .slider-arrow {
     display: inline-block;
     color: #fff;
     font-size: 50px;
@@ -30,32 +37,42 @@
     padding: 20px;
     cursor: pointer;
     font-weight: bold;
-}
-.Slider .SliderArrows:hover {
-    background: rgba(0,0,0,.2);
-}
-.Slider .DotsWrap {
+
+    &:hover {
+      background: rgba(0,0,0,.2);
+    }
+
+    &.slider-arrow-right {
+      right: 0;
+    }
+    &.slider-arrow-left {
+      left: 0;
+    }
+  }
+
+  .slider-dots-wrap {
     z-index: 99;
     text-align: center;
     width: 100%;
     position: absolute;
     bottom: 0;
-}
-.Slider .DotsWrap>span {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border: 3px solid #ccc;
-    margin: 6px;
-    cursor: pointer;
-    border-radius: 20px;
-}
-.Slider .DotsWrap>span:hover {
-    border: 3px solid #868686;
-}
-.Slider .DotsWrap>span.dotSlect {
-    background: #ccc;
-}
-a {
-    
+
+    .slider-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border: 3px solid #ccc;
+      margin: 6px;
+      cursor: pointer;
+      border-radius: 20px;
+
+      &:hover {
+        border: 3px solid #868686;
+      }
+
+      &.slider-dot-selected {
+        background: #ccc;
+      }
+    }
+  }
 }

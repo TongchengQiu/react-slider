@@ -38,7 +38,7 @@ var config = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css?root=' + __dirname + '/app/assets/images', 'resolve-url', 'sass'],
+        loaders: ['style', 'css', 'sass'],
       },
       {
         test: /\.css$/,
