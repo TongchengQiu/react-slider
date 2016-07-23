@@ -21,7 +21,7 @@
     "webpack": "^1.12.13"
   },
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rm -rf dist",
     "dist": "npm run clean && NODE_ENV=production webpack --progress --colors",
     "server": "node devServer.js",
     "build": "npm run clean && NODE_ENV=development webpack --config webpack.config.js  --progress --colors --watch"
